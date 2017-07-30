@@ -20,7 +20,7 @@ char pop(struct stack *s)
         s->top--;
     }
 }
-float result(int op2,int op1,char ele)
+char result(int op2,int op1,char ele)
 {
     if(ele=='+')
         return op2+op1;
@@ -45,7 +45,7 @@ void push(struct stack *s,char ele)
     else
     {
         int op1,op2;
-        float r;
+        char r;
         op2=pop(&s);
         op1=pop(&s);
         r=result(op2,op1,ele);
